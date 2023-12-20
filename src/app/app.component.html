@@ -1,7 +1,7 @@
 <div class="md:container md:mx-auto">
   <h1 class="text-3xl font-bold">Todos</h1>
-  <app-navbar></app-navbar>
-  <app-list></app-list>
-
+  <app-navbar (neuesTodoAnlegen)="toggleForm()"></app-navbar>
+  <app-form *ngIf="isFormVisible" (todoAdded)="onTodoAdded($event)"></app-form>
+  <app-list [todos]="todos"></app-list>
 </div>
 <router-outlet></router-outlet>

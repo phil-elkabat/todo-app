@@ -1,0 +1,24 @@
+<h2>Neues Todo anlegen</h2>
+
+<div class="max-w-md mx-auto p-4">
+  <form (ngSubmit)="addTodo()">
+    <label>Bezeichnung:</label><input [(ngModel)]="newTodoName" name="todoName" type="text"
+                                      placeholder="Neues Todo eintragen" class="border p-2 rounded mr-2"><br>
+    <label>Priorität:</label><select [(ngModel)]="newTodoPriority" name="todoPriority" class="border p-2 rounded mr-2">
+    <option value="high">High</option>
+    <option value="medium" selected>Medium</option>
+    <option value="low">Low</option>
+  </select><br>
+    <!-- here I want to add a due date with a datepicker -->
+    <label>Fällig bis:</label><input [(ngModel)]="newTodoDueDate" name="todoDueDate" type="date"
+                                     class="border p-2 rounded mr-2"><br>
+    <!-- here I need a field for categories -->
+    <label>Kategorie:</label>
+    <select [(ngModel)]="newTodoCategory" name="todoCategory">
+      <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select><br>
+    <button type="submit" class="bg-blue-500 text-white p-2 rounded">speichern</button>
+  </form>
+
+  <!-- Rest of your app's content -->
+</div>

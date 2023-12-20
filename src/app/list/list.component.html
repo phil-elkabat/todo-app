@@ -4,18 +4,18 @@
     <th></th>
     <th>ID</th>
     <th>Bezeichnung</th>
+    <th></th>
     <th>Fällig bis</th>
     <th>Kategorie</th>
-    <th></th>
   </tr>
   <tr class="border-b border-gray-200" *ngFor="let todo of todos">
-    <td></td> <!-- Empty cell for Column 1 -->
+    <td><app-priority [priority]="todo.priority"></app-priority></td> <!-- Priority will be displayed in the first column -->
     <td></td> <!-- Empty cell for Column 2 -->
     <td></td> <!-- Empty cell for Column 3 -->
     <td>  <app-list-entry [todo]="todo"></app-list-entry>
     </td> <!-- the todoItem will be placed in the fourth column -->
     <td></td> <!-- Empty cell for Column 5 -->
-    <td></td> <!-- Empty cell for Column 6 -->
-    <td></td> <!-- Empty cell for Column 7 -->
+    <td>{{todo.dueDate | date:'shortDate'}}</td> <!-- Should display the due date now -->
+    <td>{{todo.category}}</td> <!-- Should display categories -->
   </tr>
 </table>
