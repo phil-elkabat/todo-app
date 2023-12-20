@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +10,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  todos = ['Rasen mähen', 'Spülmaschine ausräumen', 'Fußballtraining absagen', 'Krankenkasse wechseln', 'Rechgnungen überweisen', 'Kontoauszüge holen'];
   title = 'todo-app';
+  name = 'Angular';
 }
