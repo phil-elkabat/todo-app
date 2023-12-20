@@ -8,11 +8,11 @@
     <th>Kategorie</th>
     <th></th>
   </tr>
-  <tr class="border-b border-gray-200">
+  <tr class="border-b border-gray-200" *ngFor="let todo of todos">
     <td></td> <!-- Empty cell for Column 1 -->
     <td></td> <!-- Empty cell for Column 2 -->
     <td></td> <!-- Empty cell for Column 3 -->
-    <td>  <app-list-entry *ngFor="let todo of todos" [todo]="todo">{{ todo }}</app-list-entry>
+    <td>  <app-list-entry [todo]="todo"></app-list-entry>
     </td> <!-- the todoItem will be placed in the fourth column -->
     <td></td> <!-- Empty cell for Column 5 -->
     <td></td> <!-- Empty cell for Column 6 -->

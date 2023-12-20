@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {ListEntryComponent} from "../list-entry/list-entry.component";
+import {Todo} from "../todo.interface";
 
 @Component({
   selector: 'app-list',
@@ -14,5 +15,14 @@ import {ListEntryComponent} from "../list-entry/list-entry.component";
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-  todos = ['Rasen mähen', 'Spülmaschine ausräumen', 'Fußballtraining absagen', 'Krankenkasse wechseln', 'Rechgnungen überweisen', 'Kontoauszüge holen'];
+
+  todos: Todo[] = [
+    {name: 'Rasen mähen', priority: 'high'},
+    {name: 'Spülmaschine ausräumen', priority: 'medium'},
+    {name: 'Fußballtraining absagen', priority: 'low'},
+    {name: 'Krankenkasse wechseln', priority: 'medium'},
+    {name: 'Rechgnungen überweisen', priority: 'high'},
+    {name: 'Kontoauszüge holen', priority: 'low'}
+  ];
+
 }
