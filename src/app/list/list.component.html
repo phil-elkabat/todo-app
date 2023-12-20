@@ -1,0 +1,21 @@
+<table>
+  <tr class="border-b border-gray-200">
+    <th></th>
+    <th></th>
+    <th>ID</th>
+    <th>Bezeichnung</th>
+    <th>Fällig bis</th>
+    <th>Kategorie</th>
+    <th></th>
+  </tr>
+  <tr class="border-b border-gray-200">
+    <td></td> <!-- Empty cell for Column 1 -->
+    <td></td> <!-- Empty cell for Column 2 -->
+    <td></td> <!-- Empty cell for Column 3 -->
+    <td>  <app-list-entry *ngFor="let todo of todos" [todo]="todo">{{ todo }}</app-list-entry>
+    </td> <!-- Todo item in the fourth column -->
+    <td></td> <!-- Empty cell for Column 5 -->
+    <td></td> <!-- Empty cell for Column 6 -->
+    <td></td> <!-- Empty cell for Column 7 -->
+  </tr>
+</table>

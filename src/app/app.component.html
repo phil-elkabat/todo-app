@@ -1,26 +1,7 @@
 <div class="md:container md:mx-auto">
   <h1 class="text-3xl font-bold">Todos</h1>
-
-  <table>
-    <tr>
-      <th></th>
-      <th></th>
-      <th>ID</th>
-      <th>Bezeichnung</th>
-      <th>Fällig bis</th>
-      <th>Kategorie</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let todo of todos">
-      <td></td> <!-- Empty cell for Column 1 -->
-      <td></td> <!-- Empty cell for Column 2 -->
-      <td></td> <!-- Empty cell for Column 3 -->
-      <td>{{ todo }}</td> <!-- Todo item in the fourth column -->
-      <td></td> <!-- Empty cell for Column 5 -->
-      <td></td> <!-- Empty cell for Column 6 -->
-      <td></td> <!-- Empty cell for Column 7 -->
-    </tr>
-  </table>
+  <app-navbar></app-navbar>
+  <app-list></app-list>
 
 </div>
 <router-outlet></router-outlet>
